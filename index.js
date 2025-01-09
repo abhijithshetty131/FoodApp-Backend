@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const path = require("path");
+const app = express();
 
 const envFile = `.env.${process.env.NODE_ENV || "development"}`;
 dotenv.config({ path: path.resolve(__dirname, `../.env.${envFile}`) });
@@ -16,7 +17,6 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-const app = express();
 const PORT = 8000;
 const uri = process.env.MONGO_URI;
 
