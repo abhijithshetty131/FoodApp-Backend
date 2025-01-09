@@ -10,12 +10,12 @@ const envFile = `.env.${process.env.NODE_ENV || "development"}`;
 dotenv.config({ path: path.resolve(__dirname, `../.env.${envFile}`) });
 dotenv.config({ path: path.resolve(__dirname, "../.env") });
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "client/build")));
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-  });
-}
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static(path.join(__dirname, "client/build")));
+//   app.get("*", (req, res) => {
+//     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+//   });
+// }
 
 const PORT = 8000;
 const uri = process.env.MONGO_URI;
