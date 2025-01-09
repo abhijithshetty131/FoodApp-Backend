@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "comment": "SET NODE_ENV=production&&node ./backend/index",
-    "dev": "node ./backend/index"    
+    "dev": "node index"    
   },
   "author": "",
   "license": "ISC",
